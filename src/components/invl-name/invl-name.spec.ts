@@ -1,7 +1,7 @@
 import { TestWindow } from '@stencil/core/testing';
-import { MyComponent } from './my-component';
+import { MyComponent } from './invl-name';
 
-describe('my-component', () => {
+describe('invl-name', () => {
   it('should build', () => {
     expect(new MyComponent()).toBeTruthy();
   });
@@ -13,7 +13,7 @@ describe('my-component', () => {
       testWindow = new TestWindow();
       element = await testWindow.load({
         components: [MyComponent],
-        html: '<my-component></my-component>'
+        html: '<invl-name></invl-name>'
       });
     });
 
@@ -26,18 +26,6 @@ describe('my-component', () => {
       await testWindow.flush();
       expect(element.textContent.trim()).toEqual('Hello, World! I\'m Peter');
     });
-
-    it('should work with a last name', async () => {
-      element.last = 'Parker';
-      await testWindow.flush();
-      expect(element.textContent.trim()).toEqual('Hello, World! I\'m  Parker');
-    });
-
-    it('should work with both a first and a last name', async () => {
-      element.first = 'Peter';
-      element.last = 'Parker';
-      await testWindow.flush();
-      expect(element.textContent.trim()).toEqual('Hello, World! I\'m Peter Parker');
-    });
+    
   });
 });
