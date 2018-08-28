@@ -1,0 +1,32 @@
+{
+  "components": [
+    {
+      "tag": "invl-name",
+      "dependencies": [],
+      "componentClass": "MyComponent",
+      "componentPath": "components/invl-name/invl-name.js",
+      "styles": {
+        "$": {
+          "stylePaths": [
+            "components/invl-name/invl-name.css"
+          ]
+        }
+      },
+      "props": [
+        {
+          "name": "first",
+          "type": "String",
+          "attr": "first"
+        }
+      ],
+      "shadow": true
+    }
+  ],
+  "collections": [],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "0.11.0",
+    "typescriptVersion": "2.9.2"
+  },
+  "bundles": []
+}
