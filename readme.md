@@ -1,4 +1,4 @@
-# A simple we component that displays your name
+# A simple web component that displays your name
 
 `npm install invl-name`
 
